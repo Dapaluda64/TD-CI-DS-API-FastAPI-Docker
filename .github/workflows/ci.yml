@@ -39,22 +39,20 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-
       # Récupérer le code
       - name: Checkout code
         uses: actions/checkout@v4
-
       # Configurer Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
-
       # Installer les dépendances de développement
-      - name: Install dependencies (dev)
+      - name: Install dependencies dev
         run: |
-          pip install -r app/requirements-dev.txt
-
+          python -m pip install -upgrade pip
+          pip install -r requirements-dev.txt
+          pip list
       # Tests unitaires / async
       - name: Run tests
         run: |
