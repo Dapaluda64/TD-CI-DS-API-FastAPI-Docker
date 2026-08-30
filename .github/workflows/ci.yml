@@ -14,7 +14,7 @@ jobs:
   linting:
     runs-on: ubuntu-24.04
     steps:
-      # runner info 
+      # runner infos 
       - name: Runner infos
         run: |
           echo "Runner name : $RUNNER_NAME" 
@@ -43,7 +43,7 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      # runner info 
+      # runner infos
       - name: Runner infos
         run: |
           echo "Runner name : $RUNNER_NAME" 
@@ -71,11 +71,11 @@ jobs:
   SafetyScan:
     runs-on: ubuntu-24.04
     steps:
-      # runner info 
+      # runner infos
       - name: Runner infos
-      run: |
-        echo "Runner name : $RUNNER_NAME" 
-        echo "Runner os : $RUNNER_OS" 
+        run: |
+          echo "Runner name : $RUNNER_NAME" 
+          echo "Runner os : $RUNNER_OS" 
       # Récupérer le code
       - name: Checkout code
         uses: actions/checkout@v4
