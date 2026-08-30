@@ -5,7 +5,7 @@ on:
     branches: [main]
   push:
 
-    branches: [dev]
+    branches: [main, dev]
 
 permissions:
   contents: read
@@ -33,3 +33,8 @@ jobs:
         run: |
           export PYTHONPATH=$(pwd)
           pytest --maxfail=1 --disable-warnings -q 
+      # Vérifier la sécurité des dépendances (optionnel) 
+      - name: Check for security issues 
+        run: | 
+          safety check || true
+          
