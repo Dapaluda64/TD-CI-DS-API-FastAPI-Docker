@@ -1,6 +1,10 @@
 # Data-Science-API-FastAPI-Docker
- 
+
+![CI](https://github.com/AlexandruEmil/Data-Science-API-FastAPI-Docker/actions/workflows/ci.yml/badge.svg)
+
 This project demonstrates a simple yet powerful API built using FastAPI for serving machine learning predictions. The API is containerized using Docker and is ready for deployment in any environment.
+
+
 
 # Features
 
